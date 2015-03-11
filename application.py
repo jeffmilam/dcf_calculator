@@ -21,13 +21,15 @@ def calculate():
             dep_amort    = float(request.form['dep_amort'])
             capex        = float(request.form['capex'])
             discount_pct = float(request.form['discount_pct'])
+            adjustment   =  float(request.form['adjustment']) if request.form['adjustment'] else 0
 
             _free_cash_flow = free_cash_flow(total_sales=total_sales,
                                         cogs=cogs,
                                         operating_expense=op_expense,
                                         tax_rate=tax_rate,
                                         dep_amort=dep_amort,
-                                        cap_ex=capex)
+                                        cap_ex=capex,
+                                        adjustment=adjustment)
 
         except Exception as e:
             print e

@@ -1,10 +1,10 @@
 from __future__ import division
 import math
 
-def free_cash_flow(total_sales, cogs, operating_expense, tax_rate, dep_amort, cap_ex):
+def free_cash_flow(total_sales, cogs, operating_expense, tax_rate, dep_amort, cap_ex, adjustment=0):
 
     _gross_profit = gross_profit(total_sales, cogs)
-    _operating_income = operating_income(_gross_profit, operating_expense)
+    _operating_income = operating_income(_gross_profit, operating_expense, adjustment)
     _nopat = nopat(_operating_income, tax_rate)
 
     return _nopat + dep_amort - cap_ex
@@ -26,8 +26,8 @@ def nopat(operating_income, tax_rate):
     """
     return operating_income * (1-tax_rate)
 
-def operating_income(gross_profit, operating_expense, special_mode=False):
-    return (gross_profit - operating_expense) - 500
+def operating_income(gross_profit, operating_expense, adjustment=0):
+    return (gross_profit - operating_expense) - adjustment
 
 def gross_profit(total_sales, cogs):
     """

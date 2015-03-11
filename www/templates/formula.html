@@ -66,6 +66,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <div class="col-xs-3">
+                        <label>Adjustment (optional)</label>
+                    <input type="text" name="adjustment" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
                     <div class="col-sm-10">
                     <button type="submit" class="btn btn-primary">calculate</button>
                     </div>
@@ -95,6 +101,7 @@
                         'dep_amort'    : $('input[name=dep_amort]').val(),
                         'capex'        : $('input[name=capex]').val(),
                         'discount_pct' : $('input[name=discount_pct]').val(),
+                        'adjustment'   : $('input[name=adjustment]').val(),
                     };
 
                     $.ajax({
