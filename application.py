@@ -31,7 +31,7 @@ def calculate():
 
         except Exception as e:
             print e
-            return jsonify(success=False, result="Failed to calculate power. Make sure inputs are correct")
+            return jsonify(success=False, result="Failed to calculate Discount cash flow. Make sure inputs are correct")
 
         return jsonify(success                   = True,
                        _free_cash_flow           = _free_cash_flow,
