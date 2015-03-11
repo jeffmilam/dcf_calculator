@@ -11,7 +11,10 @@ Discount cash flow formula
 1. make
 
 ###Deployment###
-1. make deploy
+Install [Heroku Toolbelt](https://toolbelt.heroku.com/) for deployment and create application
+then run
+
+* make deploy
 
 ### Tech stack ###
 1. Python 2.7.x
