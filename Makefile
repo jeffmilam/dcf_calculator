@@ -6,7 +6,10 @@ setup:
 	@echo ">>> Installing dependancies from requirements.txt"
 	.venv/bin/pip install -r requirements.txt
 
-tests:
-	nosetests
+deploy:
+	@echo ">>> Deploying to heroku"
 
-.PHONY: all setup tests
+tests:
+	@nosetests
+
+.PHONY: all setup tests deploy
