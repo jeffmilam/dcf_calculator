@@ -25,20 +25,8 @@
             <form id="power-form"  class="form-horizontal" role="form">
                 <div class="form-group">
                     <div class="col-xs-3">
-                     <label>Total sales</label>
-                    <input type="text" name="total_sales" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-3">
-                    <label>Cogs</label>
-                    <input type="text" name="cogs" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-xs-3">
-                    <label>Operating expense</label>
-                    <input type="text" name="op_expense" class="form-control">
+                     <label>Operating Income</label>
+                    <input type="text" name="op_income" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
@@ -94,9 +82,7 @@
 
                     $('#results').empty();
                     var formData = {
-                        'total_sales'  : $('input[name=total_sales]').val(),
-                        'cogs'         : $('input[name=cogs]').val(),
-                        'op_expense'   : $('input[name=op_expense]').val(),
+                        'op_income'    : $('input[name=op_income]').val(),
                         'tax_rate'     : $('input[name=tax_rate]').val(),
                         'dep_amort'    : $('input[name=dep_amort]').val(),
                         'capex'        : $('input[name=capex]').val(),
