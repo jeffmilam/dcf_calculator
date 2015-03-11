@@ -8,6 +8,7 @@ setup:
 
 deploy:
 	@echo ">>> Deploying to heroku"
+	@git push heroku master
 
 tests:
 	@nosetests
