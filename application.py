@@ -19,7 +19,7 @@ def calculate():
             dep_amort    = float(request.form['dep_amort'])
             capex        = float(request.form['capex'])
             discount_pct = float(request.form['discount_pct'])
-            adjustment   =  float(request.form['adjustment']) if request.form['adjustment'] else 0
+            adjustment   = float(request.form['adjustment']) if request.form['adjustment'] else 0
 
             _free_cash_flow = free_cash_flow(operating_income=op_income,
                                              tax_rate=tax_rate,

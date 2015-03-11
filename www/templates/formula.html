@@ -49,8 +49,39 @@
                 </div>
                 <div class="form-group">
                     <div class="col-xs-3">
+                        <label>Growth rate for years 1 through 10</label>
+                    <input type="text" name="growth" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-3">
+                        <label>Growth rate for years 11 to perpetuity</label>
+                    <input type="text" name="growth_perpetuity" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-xs-3">
                         <label>Discount %</label>
                     <input type="text" name="discount_pct" class="form-control">
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <div class="col-xs-3">
+                        <label>Cash balance</label>
+                    <input type="text" name="cash_balance" class="form-control">
+                    </div>
+                </div>
+                                <div class="form-group">
+                    <div class="col-xs-3">
+                        <label>Debt balance</label>
+                    <input type="text" name="debt_balance" class="form-control">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <div class="col-xs-3">
+                        <label>Shares Outstanding</label>
+                    <input type="text" name="shares_outstanding" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
@@ -88,6 +119,11 @@
                         'capex'        : $('input[name=capex]').val(),
                         'discount_pct' : $('input[name=discount_pct]').val(),
                         'adjustment'   : $('input[name=adjustment]').val(),
+                        'cash_balance' : $('input[name=cash_balance]').val(),
+                        'debt_balance' : $('input[name=debt_balance]').val(),
+                        'shares_outstanding' : $('input[name=shares_outstanding]').val(),
+                        'growth'       : $('input[name=growth]').val(),
+                        'growth_perpetuity' : $('input[name=growth_perpetuity]').val(),
                     };
 
                     $.ajax({
