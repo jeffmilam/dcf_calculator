@@ -66,13 +66,13 @@ class TestDcfCalculatorYear2015(unittest.TestCase):
 
 
     def test_discount_free_cash_flow(self):
-        _free_cash_flow = free_cash_flow(total_sales=1477600,
-                                    cogs=1235100,
-                                    operating_expense=180700,
+        _free_cash_flow = free_cash_flow(total_sales=1507152,
+                                    cogs=1260733,
+                                    operating_expense=182365,
                                     tax_rate=0,
-                                    dep_amort=58100,
-                                    cap_ex=62200,
-                                    adjustment=500)
+                                    dep_amort=52100,
+                                    cap_ex=55000,
+                                    adjustment=0)
 
-        self.assertEquals(discount_free_cash_flow(_free_cash_flow, 10, 0), 57200)
+        self.assertEquals(discount_free_cash_flow(_free_cash_flow, 10, 1), 55594.54545454545)
 
