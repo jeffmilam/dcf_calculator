@@ -1,0 +1,7 @@
+.*.ipynb
+*.pyc
+*.log
+.DS_STORE
+.venv
+data
+venv
