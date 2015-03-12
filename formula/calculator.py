@@ -22,5 +22,5 @@ def nopat(operating_income, tax_rate):
     """
         nopat = Net Operating Profit After Tax
     """
-    return operating_income * (1-tax_rate)
+    return operating_income * (1-(tax_rate/100))
 
